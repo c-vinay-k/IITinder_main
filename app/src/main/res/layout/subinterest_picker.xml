@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="10sp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/subdialog"
+
+    >
+
+    <TextView
+        android:id="@+id/subInterestHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro"
+        android:text="Good. Now what do you like in "
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <GridView
+        android:id="@+id/subGrid"
+        android:padding="15sp"
+        android:gravity="center_horizontal"
+        android:verticalSpacing="20sp"
+        android:horizontalSpacing="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="500sp"
+        android:numColumns="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subInterestHeading"
+        app:layout_constraintVertical_bias="0.353" />
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_height="500sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/subInterestHeading"
+        tools:layout_editor_absoluteX="3dp" />-->
+
+    <Button
+        android:id="@+id/subButtonCancel"
+        android:layout_width="150sp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:width="120sp"
+        android:height="50sp"
+        android:elevation="3sp"
+        android:background="@drawable/sub_interest_cancel_button"
+        android:fontFamily="@font/sf_pro"
+        android:text="Cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subGrid" />
+
+    <Button
+        android:id="@+id/subButtonOK"
+        android:layout_width="150sp"
+        android:layout_height="49dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="3sp"
+        android:background="@drawable/sub_interest_ok_btn"
+        android:fontFamily="@font/sf_pro"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subGrid" />
+</androidx.constraintlayout.widget.ConstraintLayout>
